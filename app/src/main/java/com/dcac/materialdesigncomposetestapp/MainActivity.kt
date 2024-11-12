@@ -18,22 +18,21 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.dcac.materialdesigncomposetestapp.ui.theme.MaterialDesignComposeTestAppTheme
@@ -47,17 +46,26 @@ class MainActivity : ComponentActivity() {
             MaterialDesignComposeTestAppTheme {
                 val context = LocalContext.current
                 Scaffold(topBar = {
-                    CenterAlignedTopAppBar(
-                        title = {
-                            Text(
-                                text = "Home",
-                                fontWeight = FontWeight.Bold
-                            )
-                        },
-                        colors = TopAppBarDefaults.largeTopAppBarColors(
-                            containerColor = MaterialTheme.colorScheme.primaryContainer
+                    Column {
+                        CenterAlignedTopAppBar(
+                            {
+                                Row(verticalAlignment = Alignment.CenterVertically,horizontalArrangement = Arrangement.Center) {
+                                    Image(
+                                        modifier = Modifier
+                                            .size(dimensionResource(id = R.dimen.image_size))
+                                            .padding(dimensionResource(id = R.dimen.padding_small)),
+                                        painter = painterResource(R.drawable.logo_home),
+                                        contentDescription = null
+                                    )
+                                    Text(
+                                        text = "Home",
+                                        style = MaterialTheme.typography.displayLarge
+                                    )
+                                }
+                            }
                         )
-                    )
+                        HorizontalDivider()
+                    }
                 }
                 ) { innerPadding ->
                     Surface(
@@ -83,7 +91,7 @@ fun Welcome(context: Context) {
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
         Image(
-            painter = painterResource(R.drawable.welcome_app_image),
+            painter = painterResource(R.drawable.welcome_app_image_2),
             contentDescription = "welcome_to_the_app",
             modifier = Modifier.padding(16.dp)
         )
@@ -114,7 +122,7 @@ fun ButtonsColumn(context: Context) {
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = stringResource(R.string.go_to_affirmations),
-                    fontWeight = FontWeight.Bold
+                    style = MaterialTheme.typography.displayMedium
                 )
             }
         }
@@ -123,8 +131,7 @@ fun ButtonsColumn(context: Context) {
             onClick = {
                 val intent = Intent(context, CoursesActivity::class.java)
                 context.startActivity(intent)
-            },
-            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+            }
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
@@ -135,7 +142,7 @@ fun ButtonsColumn(context: Context) {
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = stringResource(R.string.go_to_courses),
-                    fontWeight = FontWeight.Bold
+                    style = MaterialTheme.typography.displayMedium
                 )
             }
         }
@@ -144,8 +151,7 @@ fun ButtonsColumn(context: Context) {
             onClick = {
                 val intent = Intent(context, WoofActivity::class.java)
                 context.startActivity(intent)
-            },
-            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+            }
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
@@ -156,7 +162,7 @@ fun ButtonsColumn(context: Context) {
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = stringResource(R.string.go_to_woof),
-                    fontWeight = FontWeight.Bold
+                    style = MaterialTheme.typography.displayMedium
                 )
             }
         }

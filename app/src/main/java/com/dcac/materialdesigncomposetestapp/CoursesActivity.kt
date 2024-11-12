@@ -6,7 +6,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -15,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -22,20 +22,20 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -52,17 +52,26 @@ class CoursesActivity : ComponentActivity() {
             MaterialDesignComposeTestAppTheme {
                 val context = LocalContext.current
                 Scaffold(topBar = {
-                    CenterAlignedTopAppBar(
-                        title = {
-                            Text(
-                                text = "Courses",
-                                fontWeight = FontWeight.Bold
-                            )
-                        },
-                        colors = TopAppBarDefaults.largeTopAppBarColors(
-                            containerColor = MaterialTheme.colorScheme.primaryContainer
+                    Column {
+                        CenterAlignedTopAppBar(
+                            {
+                                Row(verticalAlignment = Alignment.CenterVertically,horizontalArrangement = Arrangement.Center) {
+                                    Image(
+                                        modifier = Modifier
+                                            .size(dimensionResource(id = R.dimen.image_size))
+                                            .padding(dimensionResource(id = R.dimen.padding_small)),
+                                        painter = painterResource(R.drawable.logo_courses),
+                                        contentDescription = null
+                                    )
+                                    Text(
+                                        text = "Courses",
+                                        style = MaterialTheme.typography.displayLarge
+                                    )
+                                }
+                            }
                         )
-                    )
+                        HorizontalDivider()
+                    }
                 }
                 ) { innerPadding ->
                     Surface(
@@ -97,9 +106,9 @@ fun CoursesApp(context: Context) {
                 CourseCard(course)
             }
         }
+        HorizontalDivider()
         Row(
-            modifier = Modifier.background(MaterialTheme.colorScheme.primaryContainer)
-                .fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
             // Fixed GoHomeButton at the bottom
@@ -110,9 +119,8 @@ fun CoursesApp(context: Context) {
 
 @Composable
 fun CourseCard(course: Course) {
-    Card {
-        Row(modifier = Modifier.fillMaxSize()
-            .background(MaterialTheme.colorScheme.primaryContainer)) {
+    Card() {
+        Row(modifier = Modifier.fillMaxSize()) {
             Image(
                 painter = painterResource(course.courseResourceId),     // Load the image associated with the assertion
                 contentDescription = stringResource(course.courseTitle),   // Describe the image for accessibility
@@ -128,18 +136,17 @@ fun CourseCard(course: Course) {
                 Text(
                     text = LocalContext.current.getString(course.courseTitle),     // Get the text of the assertion
                     fontSize = 11.sp, // use a style for the text define in the theme
-                    fontWeight = FontWeight.Bold
+                    style = MaterialTheme.typography.labelSmall
                 )
                 Row(modifier=Modifier.padding(top=dimensionResource(R.dimen.padding_small))) {
                     Icon(
                         painter = painterResource(R.drawable.course_icon_list_50),     // Load the image associated with the assertion
-                        contentDescription = stringResource(R.string.course_icon_list),   // Describe the image for accessibility ,  // Cut the image to fill the space while maintaining the ratio
-                    )
+                        contentDescription = stringResource(R.string.course_icon_list)   // Describe the image for accessibility ,  // Cut the image to fill the space while maintaining the ratio
+                        )
                     Text(
                         text = course.courseNumber.toString(),    // Get the text of the assertion
-                        modifier = Modifier.padding(start = dimensionResource(R.dimen.padding_small)),            //adding a padding around the text
-                        style = MaterialTheme.typography.labelMedium, // use a style for the text define in the theme
-                        fontWeight = FontWeight.Bold
+                        modifier = Modifier.padding(start = dimensionResource(R.dimen.padding_small)),
+                        style = MaterialTheme.typography.bodyLarge
                         )
                 }
 

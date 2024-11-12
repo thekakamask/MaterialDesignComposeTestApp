@@ -18,8 +18,15 @@
    - Fluid and responsive layout with adapted margins.
 
 ### 4. Woof Section
-   - IN PROGRESS
+   - A showcase of dog profiles displayed in a list using LazyColumn. 
+   - Each profile card includes an image, the dog's name, age, and additional information styled with custom fonts. 
+   - Enhanced design with a top bar displaying a logo and title, and a divider to visually separate the toolbar from the content. 
+   - A fixed bottom bar with a return button to the home page, styled for clear separation from the list of dog profiles.
 
+## Design and Theming Enhancement
+- Typography: Custom fonts (Abril Fatface and Montserrat) were added for a more distinctive look
+- Shape Customization: Updated shapes with custom rounded corners
+- Colors: Custom colors for better displaying the UI elements
 
 ## Technology Stack
 - **Kotlin**: Primary language for modern Android development.
