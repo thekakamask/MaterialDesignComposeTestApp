@@ -33,7 +33,7 @@ fun GoHomeButton(context: Context) {
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(
-                painter = painterResource(id = R.drawable.button_home_50),
+                painter = painterResource(id = R.drawable.button_home_24),
                 contentDescription = null,
                 modifier = Modifier.size(30.dp)
             )

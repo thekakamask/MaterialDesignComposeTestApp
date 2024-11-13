@@ -31,6 +31,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
@@ -119,7 +120,7 @@ fun CoursesApp(context: Context) {
 
 @Composable
 fun CourseCard(course: Course) {
-    Card() {
+    Card(modifier = Modifier.clip(MaterialTheme.shapes.medium)) {
         Row(modifier = Modifier.fillMaxSize()) {
             Image(
                 painter = painterResource(course.courseResourceId),     // Load the image associated with the assertion
@@ -138,9 +139,9 @@ fun CourseCard(course: Course) {
                     fontSize = 11.sp, // use a style for the text define in the theme
                     style = MaterialTheme.typography.labelSmall
                 )
-                Row(modifier=Modifier.padding(top=dimensionResource(R.dimen.padding_small))) {
+                Row(modifier=Modifier.padding(top=dimensionResource(R.dimen.padding_small)), verticalAlignment = Alignment.CenterVertically) {
                     Icon(
-                        painter = painterResource(R.drawable.course_icon_list_50),     // Load the image associated with the assertion
+                        painter = painterResource(R.drawable.icon_list_24),     // Load the image associated with the assertion
                         contentDescription = stringResource(R.string.course_icon_list)   // Describe the image for accessibility ,  // Cut the image to fill the space while maintaining the ratio
                         )
                     Text(

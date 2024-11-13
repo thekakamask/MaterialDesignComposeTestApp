@@ -5,22 +5,26 @@
 
 ### 1. Interactive Home Interface
    - The application displays a home page with a welcome message and three navigation buttons.
+   - A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
    - The buttons provide access to the following sections: Affirmations, Courses and Woof.
 
-### 2. Affirmations Section
+### 2. Affirmations Section- A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
    - A list of statement cards is displayed in a `LazyColumn` type layout.
    - Each card features an image and affirmation text, with an elegant layout and clearly defined margins.
-   - A fixed back button makes it easy to return to the home page.
+   - A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
+   - A fixed bottom bar with a return button to the home page, styled for clear separation from the list of affirmations.
 
 ### 3. Courses Section
    - Using `LazyVerticalGrid` to display courses in a 2 column grid.
    - Each course card displays an image, a title, and the number of associated courses.
-   - Fluid and responsive layout with adapted margins.
+   - A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
+   - A fixed bottom bar with a return button to the home page, styled for clear separation from the list of courses.
 
 ### 4. Woof Section
-   - A showcase of dog profiles displayed in a list using LazyColumn. 
-   - Each profile card includes an image, the dog's name, age, and additional information styled with custom fonts. 
-   - Enhanced design with a top bar displaying a logo and title, and a divider to visually separate the toolbar from the content. 
+   - An overview of dog profiles displayed in a list with LazyColumn.
+   - Each profile card displays a picture, the dog's name, age, and an expandable description of their hobbies. The map animation uses animateContentSize for smooth adjustment when expanding or shrinking.
+   - Profile cards feature background colors that change depending on the expanded or collapsed state, providing a dynamic visual touch. 
+   - A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
    - A fixed bottom bar with a return button to the home page, styled for clear separation from the list of dog profiles.
 
 ## Design and Theming Enhancement

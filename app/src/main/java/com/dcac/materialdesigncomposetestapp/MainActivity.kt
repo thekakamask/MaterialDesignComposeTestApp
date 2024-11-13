@@ -91,7 +91,7 @@ fun Welcome(context: Context) {
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
         Image(
-            painter = painterResource(R.drawable.welcome_app_image_2),
+            painter = painterResource(R.drawable.welcome_app_image),
             contentDescription = "welcome_to_the_app",
             modifier = Modifier.padding(16.dp)
         )
@@ -115,7 +115,7 @@ fun ButtonsColumn(context: Context) {
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
-                    painter = painterResource(id = R.drawable.button_affirmations_50),
+                    painter = painterResource(id = R.drawable.button_landscape_24),
                     contentDescription = null,
                     modifier = Modifier.size(30.dp)
                 )
@@ -135,7 +135,7 @@ fun ButtonsColumn(context: Context) {
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
-                    painter = painterResource(id = R.drawable.button_courses_50),
+                    painter = painterResource(id = R.drawable.button_school_24),
                     contentDescription = null,
                     modifier = Modifier.size(30.dp)
                 )
@@ -155,7 +155,7 @@ fun ButtonsColumn(context: Context) {
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
-                    painter = painterResource(id = R.drawable.button_woof_50),
+                    painter = painterResource(id = R.drawable.button_pets_24),
                     contentDescription = null,
                     modifier = Modifier.size(30.dp)
                 )
