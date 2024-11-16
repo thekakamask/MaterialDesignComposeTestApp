@@ -6,9 +6,10 @@
 ### 1. Interactive Home Interface
    - The application displays a home page with a welcome message and three navigation buttons.
    - A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
-   - The buttons provide access to the following sections: Affirmations, Courses and Woof.
+   - The buttons provide access to the following sections: Affirmations, Races, Woof, Superheroes and Wellness.
 
-### 2. Affirmations Section- A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
+### 2. Affirmations Section
+   - A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
    - A list of statement cards is displayed in a `LazyColumn` type layout.
    - Each card features an image and affirmation text, with an elegant layout and clearly defined margins.
    - A top bar displays a centered logo and title, with a visual separator to better distinguish the main content of the toolbar.
