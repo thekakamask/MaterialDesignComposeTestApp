@@ -4,6 +4,8 @@
     <string name="go_to_affirmations">Affirmations</string>
     <string name="go_to_courses">Courses</string>
     <string name="go_to_woof">Woof</string>
+    <string name="go_to_superheroes">Superheroes</string>
+    <string name="go_to_wellness">Wellness</string>
     <string name="go_to_home">Home</string>
 
 <!--    AffirmationsActivity-->
@@ -67,6 +69,116 @@
     <string name="about">About:</string>
     <string name="years_old">%d years old</string>
     <string name="expand_button_content_description">See more or less information about a dog.</string>
+
+    <!--    WoofActivity-->
+    <string name="superhero_name_1">Nick the Night and Day</string>
+    <string name="superhero_name_2">Reality Protector</string>
+    <string name="superhero_name_3">Andre the Giant</string>
+    <string name="superhero_name_4">Benjamin the Brave</string>
+    <string name="superhero_name_5">Magnificent Maru</string>
+    <string name="superhero_name_6">Dynamic Yasmine</string>
+
+    <string name="superhero_power_1">The jetpack hero</string>
+    <string name="superhero_power_2">Understands the absolute truth</string>
+    <string name="superhero_power_3">Mimics the light and night to blend in</string>
+    <string name="superhero_power_4">Harnesses the power of canary to develop bravely</string>
+    <string name="superhero_power_5">Effortlessly glides in to save the day</string>
+    <string name="superhero_power_6">Ability to shift to any form and energize</string>
+
+    <!--    WellnessActivity-->
+    <string name="wellness_day_1">Day 1</string>
+    <string name="wellness_day_2">Day 2</string>
+    <string name="wellness_day_3">Day 3</string>
+    <string name="wellness_day_4">Day 4</string>
+    <string name="wellness_day_5">Day 5</string>
+    <string name="wellness_day_6">Day 6</string>
+    <string name="wellness_day_7">Day 7</string>
+    <string name="wellness_day_8">Day 8</string>
+    <string name="wellness_day_9">Day 9</string>
+    <string name="wellness_day_10">Day 10</string>
+    <string name="wellness_day_11">Day 11</string>
+    <string name="wellness_day_12">Day 12</string>
+    <string name="wellness_day_13">Day 13</string>
+    <string name="wellness_day_14">Day 14</string>
+    <string name="wellness_day_15">Day 15</string>
+    <string name="wellness_day_16">Day 16</string>
+    <string name="wellness_day_17">Day 17</string>
+    <string name="wellness_day_18">Day 18</string>
+    <string name="wellness_day_19">Day 19</string>
+    <string name="wellness_day_20">Day 20</string>
+    <string name="wellness_day_21">Day 21</string>
+    <string name="wellness_day_22">Day 22</string>
+    <string name="wellness_day_23">Day 23</string>
+    <string name="wellness_day_24">Day 24</string>
+    <string name="wellness_day_25">Day 25</string>
+    <string name="wellness_day_26">Day 26</string>
+    <string name="wellness_day_27">Day 27</string>
+    <string name="wellness_day_28">Day 28</string>
+    <string name="wellness_day_29">Day 29</string>
+    <string name="wellness_day_30">Day 30</string>
+
+    <string name="wellness_title_1">Start Easy</string>
+    <string name="wellness_title_2">Increase Your Pace</string>
+    <string name="wellness_title_3">Core Focus</string>
+    <string name="wellness_title_4">Build Your Endurance</string>
+    <string name="wellness_title_5">Active Rest</string>
+    <string name="wellness_title_6">Strength and Stability</string>
+    <string name="wellness_title_7">Reach New Heights</string>
+    <string name="wellness_title_8">Lower Body Workout</string>
+    <string name="wellness_title_9">Muscle Strengthening</string>
+    <string name="wellness_title_10">Cardio Boost</string>
+    <string name="wellness_title_11">Body Mastery</string>
+    <string name="wellness_title_12">Flexibility Challenge</string>
+    <string name="wellness_title_13">Functional Strength</string>
+    <string name="wellness_title_14">Full Body Workout</string>
+    <string name="wellness_title_15">Rest and Recovery</string>
+    <string name="wellness_title_16">Endurance and Strength</string>
+    <string name="wellness_title_17">Upper Body Focus</string>
+    <string name="wellness_title_18">Stability and Balance</string>
+    <string name="wellness_title_19">Cardio Intervals</string>
+    <string name="wellness_title_20">Explosive Challenge</string>
+    <string name="wellness_title_21">Core Reinforcement</string>
+    <string name="wellness_title_22">Flexibility Training</string>
+    <string name="wellness_title_23">Muscular Endurance</string>
+    <string name="wellness_title_24">Active Recovery</string>
+    <string name="wellness_title_25">Power and Agility</string>
+    <string name="wellness_title_26">Intense Cardio</string>
+    <string name="wellness_title_27">Posture Improvement</string>
+    <string name="wellness_title_28">Overall Strengthening</string>
+    <string name="wellness_title_29">Cardio Focus</string>
+    <string name="wellness_title_30">Final Challenge</string>
+
+    <string name="wellness_description_1">Walk for 20 minutes to gently activate your body.</string>
+    <string name="wellness_description_2">Try a 15-minute HIIT session to boost your cardio.</string>
+    <string name="wellness_description_3">Do 3 sets of planks to strengthen your core.</string>
+    <string name="wellness_description_4">Run for 30 minutes at a moderate pace.</string>
+    <string name="wellness_description_5">Stretch gently for an active recovery.</string>
+    <string name="wellness_description_6">Do squats and lunges to strengthen your legs.</string>
+    <string name="wellness_description_7">Add a climbing exercise to work on your endurance.</string>
+    <string name="wellness_description_8">Work on leg strength with lateral lunges and squats.</string>
+    <string name="wellness_description_9">Do push-ups to strengthen your upper body.</string>
+    <string name="wellness_description_10">Try a jump rope circuit for a quick cardio boost.</string>
+    <string name="wellness_description_11">Repeat dip sets to build arm muscles.</string>
+    <string name="wellness_description_12">Practice yoga stretches for flexibility.</string>
+    <string name="wellness_description_13">Use kettlebells for functional strength training.</string>
+    <string name="wellness_description_14">Perform a combination of squats, push-ups, and sit-ups.</string>
+    <string name="wellness_description_15">Take a rest day to recover.</string>
+    <string name="wellness_description_16">Alternate between cardio and strength for a balanced workout.</string>
+    <string name="wellness_description_17">Do pull-ups to work on your back and biceps.</string>
+    <string name="wellness_description_18">Practice tai-chi or yoga for balance improvement.</string>
+    <string name="wellness_description_19">Try interval cardio training for added intensity.</string>
+    <string name="wellness_description_20">Work on explosiveness with jump exercises.</string>
+    <string name="wellness_description_21">Practice balance exercises to strengthen your core.</string>
+    <string name="wellness_description_22">Focus on stretches for better flexibility.</string>
+    <string name="wellness_description_23">Do endurance training using light weights.</string>
+    <string name="wellness_description_24">Take a light walk or bike ride for active recovery.</string>
+    <string name="wellness_description_25">Add plyometric exercises for power.</string>
+    <string name="wellness_description_26">Train with sprints to boost cardio.</string>
+    <string name="wellness_description_27">Work on exercises to improve posture.</string>
+    <string name="wellness_description_28">Train each muscle group with medium weights.</string>
+    <string name="wellness_description_29">Practice light cardio like jogging.</string>
+    <string name="wellness_description_30">Review all exercises for a final intense challenge.</string>
+
 
 
 </resources>

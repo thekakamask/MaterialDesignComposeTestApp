@@ -1,4 +1,4 @@
-package com.dcac.materialdesigncomposetestapp
+package com.dcac.materialdesigncomposetestapp.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -40,6 +40,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.dcac.materialdesigncomposetestapp.R
 import com.dcac.materialdesigncomposetestapp.data.CoursesDataSource
 import com.dcac.materialdesigncomposetestapp.model.Course
 import com.dcac.materialdesigncomposetestapp.ui.theme.MaterialDesignComposeTestAppTheme
@@ -147,7 +148,7 @@ fun CourseCard(course: Course) {
                     Text(
                         text = course.courseNumber.toString(),    // Get the text of the assertion
                         modifier = Modifier.padding(start = dimensionResource(R.dimen.padding_small)),
-                        style = MaterialTheme.typography.bodyLarge
+                        style = MaterialTheme.typography.bodyMedium
                         )
                 }
 

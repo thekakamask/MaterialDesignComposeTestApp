@@ -1,4 +1,4 @@
-package com.dcac.materialdesigncomposetestapp
+package com.dcac.materialdesigncomposetestapp.ui
 
 import android.content.Context
 import android.content.Intent
@@ -35,6 +35,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.dcac.materialdesigncomposetestapp.R
 import com.dcac.materialdesigncomposetestapp.ui.theme.MaterialDesignComposeTestAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -92,8 +93,7 @@ fun Welcome(context: Context) {
     ) {
         Image(
             painter = painterResource(R.drawable.welcome_app_image),
-            contentDescription = "welcome_to_the_app",
-            modifier = Modifier.padding(16.dp)
+            contentDescription = "welcome_to_the_app"
         )
         ButtonsColumn(context)
     }
@@ -102,7 +102,6 @@ fun Welcome(context: Context) {
 @Composable
 fun ButtonsColumn(context: Context) {
     Column(
-        modifier = Modifier.padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -162,6 +161,46 @@ fun ButtonsColumn(context: Context) {
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = stringResource(R.string.go_to_woof),
+                    style = MaterialTheme.typography.displayMedium
+                )
+            }
+        }
+        Button(
+            modifier = Modifier.padding(8.dp),
+            onClick = {
+                val intent = Intent(context, SuperheroesActivity::class.java)
+                context.startActivity(intent)
+            }
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    painter = painterResource(id = R.drawable.button_superheroes_24),
+                    contentDescription = null,
+                    modifier = Modifier.size(30.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = stringResource(R.string.go_to_superheroes),
+                    style = MaterialTheme.typography.displayMedium
+                )
+            }
+        }
+        Button(
+            modifier = Modifier.padding(8.dp),
+            onClick = {
+                val intent = Intent(context, WellnessActivity::class.java)
+                context.startActivity(intent)
+            }
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    painter = painterResource(id = R.drawable.button_wellness_24),
+                    contentDescription = null,
+                    modifier = Modifier.size(30.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = stringResource(R.string.go_to_wellness),
                     style = MaterialTheme.typography.displayMedium
                 )
             }

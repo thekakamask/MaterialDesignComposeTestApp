@@ -1,4 +1,4 @@
-package com.dcac.materialdesigncomposetestapp
+package com.dcac.materialdesigncomposetestapp.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -35,6 +35,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.dcac.materialdesigncomposetestapp.R
 import com.dcac.materialdesigncomposetestapp.data.AffirmationsDatasource
 import com.dcac.materialdesigncomposetestapp.model.Affirmation
 import com.dcac.materialdesigncomposetestapp.ui.theme.MaterialDesignComposeTestAppTheme
@@ -171,7 +172,7 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
 @Composable
 fun AffirmationCardPreview() {
     MaterialDesignComposeTestAppTheme {
-        AffirmationsApp(context= LocalContext.current)
-        //AffirmationCard(Affirmation(R.string.affirmation1, R.drawable.image1))
+        //AffirmationsApp(context= LocalContext.current)
+        AffirmationCard(Affirmation(R.string.affirmation1, R.drawable.affirmations_image1))
     }
 }
